@@ -1,0 +1,32 @@
+<table>
+  <tr *ngFor="let curator of curators | async">
+    <td>
+      {{curator.id}}
+    </td>
+
+    <td>
+      {{curator.login}}
+    </td>
+
+    <td>
+      {{curator.name}}
+    </td>
+
+    <td>
+      {{curator.dateOfHiring}}
+    </td>
+
+    <td>
+      <button [routerLink]="['/curators', curator.id]">Show</button>
+    </td>
+
+    <td>
+      <button [routerLink]="['/curators', curator.id, 'edit']">Edit</button>
+    </td>
+
+    <td>
+      <button (click)="removeCurator(curator)">Delete</button>
+    </td>
+  </tr>
+</table>
+<button [routerLink]="['/curators', 'create']">Create</button>

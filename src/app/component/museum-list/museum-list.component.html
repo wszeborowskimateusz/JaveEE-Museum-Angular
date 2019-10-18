@@ -1,0 +1,49 @@
+<table>
+  <tr *ngFor="let museum of museums | async">
+    <td>
+      {{museum.id}}
+    </td>
+
+    <td>
+      {{museum.name}}
+    </td>
+
+    <td>
+      {{museum.city}}
+    </td>
+
+    <td *ngIf="museum.curator">
+      {{museum.curator.name}}
+    </td>
+    <td *ngIf="!museum.curator">
+      NO CURATOR
+    </td>
+
+    <td *ngIf="museum.exhibitList && museum.exhibitList.length > 0">
+      <table>
+        <tr *ngFor="let exhibit of museum.exhibitList">
+          <td>
+            {{exhibit.name}} {{exhibit.year}}
+          </td>
+        </tr>
+      </table>
+    </td>
+
+    <td *ngIf="!museum.exhibitList || museum.exhibitList.length === 0">
+      NO EXHIBITS
+    </td>
+
+    <td>
+      <button [routerLink]="['/museums', museum.id]">Show</button>
+    </td>
+
+    <td>
+      <button [routerLink]="['/museums', museum.id, 'edit']">Edit</button>
+    </td>
+
+    <td>
+      <button (click)="removeMuseum(museum)">Delete</button>
+    </td>
+  </tr>
+</table>
+<button [routerLink]="['/museums', 'create']">Create</button>

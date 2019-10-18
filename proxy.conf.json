@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "http://localhost:8080/museum-1.0-SNAPSHOT",
+    "secure": false,
+    "ws": true
+  }
+}

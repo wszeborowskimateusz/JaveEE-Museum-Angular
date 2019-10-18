@@ -1,0 +1,32 @@
+<table>
+  <tr *ngFor="let exhibit of exhibits | async">
+    <td>
+      {{exhibit.id}}
+    </td>
+
+    <td>
+      {{exhibit.name}}
+    </td>
+
+    <td>
+      {{exhibit.year}}
+    </td>
+
+    <td>
+      {{exhibit.condition}}
+    </td>
+
+    <td>
+      <button [routerLink]="['/exhibits', exhibit.id]">Show</button>
+    </td>
+
+    <td>
+      <button [routerLink]="['/exhibits', exhibit.id, 'edit']">Edit</button>
+    </td>
+
+    <td>
+      <button (click)="removeExhibit(exhibit)">Delete</button>
+    </td>
+  </tr>
+</table>
+<button [routerLink]="['/exhibits', 'create']">Create</button>

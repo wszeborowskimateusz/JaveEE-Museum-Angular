@@ -1,0 +1,51 @@
+<form #museumForm="ngForm" *ngIf="museum">
+  <table>
+    <tr>
+      <td><label for="name">Name:</label></td>
+      <td>
+        <input type="text" id="name" name="name" [(ngModel)]="museum.name">
+      </td>
+    </tr>
+    <tr>
+      <td><label for="city">City:</label></td>
+      <td>
+        <input type="text" id="city" name="city" [(ngModel)]="museum.city">
+      </td>
+    </tr>
+    <tr>
+      <td><label for="openingDate">Opening date:</label></td>
+      <td>
+        <input type="text" id="openingDate" name="openingDate" [(ngModel)]="museum.openingDate">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="exhibitList">Exhibits:</label>
+        <select [(ngModel)]="museum.exhibitList" id="exhibitList" multiple name="exhibitList"
+                [compareWith]="compareExhibits">
+          <option *ngFor="let exhibit of availableExhibits" [ngValue]="exhibit">
+            {{exhibit.name}}
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="curator">Curator:</label>
+        <select [(ngModel)]="museum.curator" id="curator" name="curator"
+                [compareWith]="compareCurators">
+          <option *ngFor="let curator of availableCurators" [ngValue]="curator">
+            {{curator.name}}
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" (click)="save()">Save</button>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</form>
+<button routerLink="/museums">Back</button>

@@ -1,0 +1,29 @@
+<form #curatorForm="ngForm" *ngIf="curator">
+  <table>
+    <tr>
+      <td><label for="login">Login:</label></td>
+      <td>
+        <input type="text" id="login" name="login" [(ngModel)]="curator.login">
+      </td>
+    </tr>
+    <tr>
+      <td><label for="name">Name:</label></td>
+      <td>
+        <input type="text" id="name" name="name" [(ngModel)]="curator.name">
+      </td>
+    </tr>
+    <tr>
+      <td><label for="dateOfHiring">Date of hiring:</label></td>
+      <td>
+        <input type="text" id="dateOfHiring" name="dateOfHiring" [(ngModel)]="curator.dateOfHiring">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" (click)="save()">Save</button>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</form>
+<button routerLink="/curators">Back</button>

@@ -1,0 +1,36 @@
+<table *ngIf="museum">
+  <tr>
+    <td>Name:</td>
+    <td>{{museum.name}}</td>
+  </tr>
+  <tr>
+    <td>City:</td>
+    <td>{{museum.city}}</td>
+  </tr>
+  <tr>
+    <td>Curator:</td>
+    <td *ngIf="museum.curator">{{museum.curator.name}}</td>
+    <td *ngIf="!museum.curator">
+      NO CURATOR
+    </td>
+  </tr>
+  <tr>
+    <td>Opening date:</td>
+    <td>{{museum.openingDate}}</td>
+  </tr>
+  <tr>
+    <td>Exhibits:</td>
+    <td *ngIf="museum.exhibitList && museum.exhibitList.length > 0">
+      <table>
+        <tr *ngFor="let exhibit of museum.exhibitList">
+          <td>{{exhibit.name}} {{exhibit.year}}</td>
+        </tr>
+      </table>
+    </td>
+    <td *ngIf="!museum.exhibitList || museum.exhibitList.length === 0">
+      NO EXHIBITS
+    </td>
+  </tr>
+</table>
+
+<button routerLink="/museums">Back</button>

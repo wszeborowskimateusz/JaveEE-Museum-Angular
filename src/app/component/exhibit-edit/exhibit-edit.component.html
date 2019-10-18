@@ -1,0 +1,34 @@
+<form #exhibitForm="ngForm" *ngIf="exhibit">
+  <table>
+    <tr>
+      <td><label for="name">Name:</label></td>
+      <td>
+        <input type="text" id="name" name="name" [(ngModel)]="exhibit.name">
+      </td>
+    </tr>
+    <tr>
+      <td><label for="year">Year:</label></td>
+      <td>
+        <input type="text" id="year" name="year" [(ngModel)]="exhibit.year">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="condition">Condition:</label>
+        <select [(ngModel)]="exhibit.condition" id="condition" name="condition">
+          <option *ngFor="let condition of exhibitConditionKeys"
+                  [ngValue]="availableConditions[condition]">
+            {{availableConditions[condition]}}
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" (click)="save()">Save</button>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</form>
+<button routerLink="/exhibits">Back</button>
