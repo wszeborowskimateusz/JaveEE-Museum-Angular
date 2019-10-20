@@ -13,5 +13,4 @@ export class Museum {
   openingDate: Date;
 
   exhibitList: Exhibit[];
-
 }

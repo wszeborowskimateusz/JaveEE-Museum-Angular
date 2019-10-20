@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
+
 import {Observable} from 'rxjs';
+
 import {Museum} from '../../model/museum';
 import {MuseumService} from '../../service/museum-service';
 
 @Component({
   selector: 'app-museum-list',
-  templateUrl: './museum-list.component.html',
-  styleUrls: ['./museum-list.component.css']
+  templateUrl: './museum-list.component.html'
 })
 export class MuseumListComponent implements OnInit {
 

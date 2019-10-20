@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+
 import {Exhibit} from '../../model/exhibit';
 import {ExhibitService} from '../../service/exhibit-service';
 import {ExhibitCondition} from '../../model/exhibit-condition.enum';
 
 @Component({
   selector: 'app-exhibit-edit',
-  templateUrl: './exhibit-edit.component.html',
-  styleUrls: ['./exhibit-edit.component.css']
+  templateUrl: './exhibit-edit.component.html'
 })
 export class ExhibitEditComponent implements OnInit {
 

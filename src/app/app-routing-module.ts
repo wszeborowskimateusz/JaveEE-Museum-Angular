@@ -1,5 +1,7 @@
 import {NgModule} from '@angular/core';
+
 import {RouterModule, Routes} from '@angular/router';
+
 import {CuratorListComponent} from './component/curator-list/curator-list.component';
 import {CuratorViewComponent} from './component/curator-view/curator-view.component';
 import {CuratorEditComponent} from './component/curator-edit/curator-edit.component';

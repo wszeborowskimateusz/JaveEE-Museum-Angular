@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+
 import {Curator} from '../../model/curator';
 import {CuratorService} from '../../service/curator-service';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-curator-view',
-  templateUrl: './curator-view.component.html',
-  styleUrls: ['./curator-view.component.css']
+  templateUrl: './curator-view.component.html'
 })
 export class CuratorViewComponent implements OnInit {
 

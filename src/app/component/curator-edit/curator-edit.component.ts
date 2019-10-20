@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {CuratorService} from '../../service/curator-service';
 import {ActivatedRoute, Router} from '@angular/router';
+
+import {CuratorService} from '../../service/curator-service';
 import {Curator} from '../../model/curator';
 
 @Component({
   selector: 'app-curator-edit',
-  templateUrl: './curator-edit.component.html',
-  styleUrls: ['./curator-edit.component.css']
+  templateUrl: './curator-edit.component.html'
 })
 export class CuratorEditComponent implements OnInit {
 

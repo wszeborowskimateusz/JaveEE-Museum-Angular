@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+
 import {Observable} from 'rxjs';
-import {Curator} from '../../model/curator';
-import {CuratorService} from '../../service/curator-service';
+
 import {ExhibitService} from '../../service/exhibit-service';
 import {Exhibit} from '../../model/exhibit';
 
 @Component({
   selector: 'app-exhibit-list',
-  templateUrl: './exhibit-list.component.html',
-  styleUrls: ['./exhibit-list.component.css']
+  templateUrl: './exhibit-list.component.html'
 })
 export class ExhibitListComponent implements OnInit {
 

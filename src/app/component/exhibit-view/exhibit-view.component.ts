@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
+
 import {ActivatedRoute} from '@angular/router';
+
 import {Exhibit} from '../../model/exhibit';
 import {ExhibitService} from '../../service/exhibit-service';
 
 @Component({
   selector: 'app-exhibit-view',
-  templateUrl: './exhibit-view.component.html',
-  styleUrls: ['./exhibit-view.component.css']
+  templateUrl: './exhibit-view.component.html'
 })
 export class ExhibitViewComponent implements OnInit {
 

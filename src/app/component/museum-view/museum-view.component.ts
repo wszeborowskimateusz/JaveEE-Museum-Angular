@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+
 import {MuseumService} from '../../service/museum-service';
 import {Museum} from '../../model/museum';
 
 @Component({
   selector: 'app-museum-view',
-  templateUrl: './museum-view.component.html',
-  styleUrls: ['./museum-view.component.css']
+  templateUrl: './museum-view.component.html'
 })
 export class MuseumViewComponent implements OnInit {
 

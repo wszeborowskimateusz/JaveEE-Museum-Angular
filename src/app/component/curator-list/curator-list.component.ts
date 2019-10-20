@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
+
+import {Observable} from 'rxjs';
+
 import {CuratorService} from '../../service/curator-service';
 import {Curator} from '../../model/curator';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-curator-list',
-  templateUrl: './curator-list.component.html',
-  styleUrls: ['./curator-list.component.css'],
+  templateUrl: './curator-list.component.html'
 })
 export class CuratorListComponent implements OnInit {
 

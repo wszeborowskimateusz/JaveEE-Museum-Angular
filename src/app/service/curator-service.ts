@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+
 import {Observable} from 'rxjs';
+
 import {Curator} from '../model/curator';
-import {Exhibit} from '../model/exhibit';
 
 @Injectable()
 export class CuratorService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   findAllCurators(): Observable<Curator[]> {
     return this.http.get<Curator[]>('api/curators');

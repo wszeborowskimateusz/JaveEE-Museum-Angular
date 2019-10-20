@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+
 import {Museum} from '../../model/museum';
 import {MuseumService} from '../../service/museum-service';
 import {Exhibit} from '../../model/exhibit';
@@ -9,8 +10,7 @@ import {CuratorService} from '../../service/curator-service';
 
 @Component({
   selector: 'app-museum-edit',
-  templateUrl: './museum-edit.component.html',
-  styleUrls: ['./museum-edit.component.css']
+  templateUrl: './museum-edit.component.html'
 })
 export class MuseumEditComponent implements OnInit {
 
