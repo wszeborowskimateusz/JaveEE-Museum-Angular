@@ -28,7 +28,7 @@ export class ExhibitEditComponent implements OnInit {
       this.exhibitService.findExhibit(Number(id)).subscribe((exhibit) => this.exhibit = exhibit);
     }
 
-    this.exhibitConditionKeys = Object.keys(this.availableConditions).filter(k => !isNaN(Number(k)));
+    this.exhibitConditionKeys = Object.keys(this.availableConditions).filter(exhibitKey => !isNaN(Number(exhibitKey)));
   }
 
   save() {
